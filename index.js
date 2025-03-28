@@ -6,7 +6,7 @@ import cors from 'cors';
 const { Client, LocalAuth } = pkg;
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 let qrData = '';
 
 app.use(cors({
