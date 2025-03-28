@@ -23,8 +23,8 @@ const client = new Client({
 // Exibe o QR Code no terminal
 client.on('qr', (qr) => {
     qrData = qr;
-    console.log('== QRCODE ===========================================================');
-    console.log(`https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(qr)}&size=300x300`);
+    //console.log('== QRCODE ===========================================================');
+    //console.log(`https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(qr)}&size=300x300`);
 });
 
 client.on('ready', () => {
