@@ -2,7 +2,6 @@
 import pkg from 'whatsapp-web.js';
 import express from 'express';
 import cors from 'cors';
-import puppeteer from 'puppeteer-core';
 
 const { Client, LocalAuth } = pkg;
 
@@ -10,15 +9,15 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 let qrData = '';
 
-app.use(cors());
+app.use(cors({
+    origin: '*',
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 // Inicializa o cliente do WhatsApp
 const client = new Client({
     authStrategy: new LocalAuth(),
-    puppeteer: {
-        headless: true, // Garante que o Chrome seja executado sem interface gráfica
-        args: ['--no-sandbox', '--disable-setuid-sandbox'] // Flags necessárias para ambientes sem privilégios de superusuário
-    }
 });
 
 // Exibe o QR Code no terminal

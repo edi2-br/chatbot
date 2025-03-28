@@ -5,20 +5,17 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "run": "node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.2",
-    "puppeteer-core": "^24.4.0",
     "whatsapp-web.js": "^1.27.0"
   },
   "engines": {
     "node": ">=18"
-  },
-  "devDependencies": {
-    "@flydotio/dockerfile": "^0.7.9"
   }
 }
