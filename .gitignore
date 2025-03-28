@@ -4,6 +4,7 @@ npm-debug.log
 yarn-error.log
 .env
 .DS_Store
+tokens/
 
 # Auth
 .wwebjs_auth/
